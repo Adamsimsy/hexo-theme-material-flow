@@ -172,8 +172,10 @@ var customSearch;
 		setWaves();
 		setScrollReveal();
 		setTocToggle();
+		/*
 		getHitokoto();
 		getPicture();
+		*/
 		$(".article .video-container").fitVids();
 
 		setTimeout(function () {

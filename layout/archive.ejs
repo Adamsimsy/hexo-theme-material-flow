@@ -1,12 +1,21 @@
 <% if (page.year || page.month) { %>
 	<%- partial('_partial/archive') %>
 <% } else { %>
+  <!--
   <section class="page-header category banner waves-image">
     <h1 id='hitokoto'></h1>
   </section>
+  -->
   <article id="archive-page"
-    class="post article white-box">
-    <section class="archive">
+    class="post white-box article-type-page">
+    <section class="meta">
+    <h2 class="title">
+    <a href="<%- url_for(page.path) %>">
+      Archives
+    </a>
+    </h2>
+    </section>
+    <section class="archive"> 
       <%
         var year = -1, postid = -1;
         site.posts.sort('date', -1).each(function(post) {
